@@ -22,14 +22,14 @@
       
   
     
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css?v=1140d252" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css?v=c6d785ac" />
     
     <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
     <script src="../../_static/documentation_options.js?v=8a448e45"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script async="true" defer="true" src="https://buttons.github.io/buttons.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -120,6 +120,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference external" href="https://datafusion.apache.org/blog/">
+   Blog
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference external" href="https://github.com/apache/datafusion/blob/main/CODE_OF_CONDUCT.md">
    Code of conduct
   </a>
@@ -144,6 +149,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../example-usage.html">
    Example Usage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../concepts-readings-events.html">
+   Concepts, Readings, Events
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../crate-configuration.html">
+   Crate Configuration
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -254,6 +269,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../sql/special_functions.html">
+     Special Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../sql/sql_status.html">
      Status
     </a>
@@ -271,6 +291,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../explain-usage.html">
+   Reading Explain Plans
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../faq.html">
    Frequently Asked Questions
   </a>
@@ -285,6 +310,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../library-user-guide/index.html">
    Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../library-user-guide/extensions.html">
+   Extensions List
   </a>
  </li>
  <li class="toctree-l1">
@@ -338,6 +368,16 @@
    Profiling Cookbook
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../library-user-guide/query-optimizer.html">
+   DataFusion Query Optimizer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../library-user-guide/api-health.html">
+   API health policy
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -356,8 +396,23 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../contributor-guide/getting_started.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../contributor-guide/architecture.html">
    Architecture
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contributor-guide/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contributor-guide/howtos.html">
+   HOWTOs
   </a>
  </li>
  <li class="toctree-l1">
@@ -366,13 +421,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../contributor-guide/quarterly_roadmap.html">
-   Quarterly Roadmap
+  <a class="reference internal" href="../../contributor-guide/governance.html">
+   Governance
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../contributor-guide/governance.html">
-   Governance
+  <a class="reference internal" href="../../contributor-guide/inviting.html">
+   Inviting New Committers and PMC Members
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -605,7 +660,7 @@ OPTIONS:
 
 <span class="w">        </span>--maxrows<span class="w"> </span>&lt;MAXROWS&gt;
 <span class="w">            </span>The<span class="w"> </span>max<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>rows<span class="w"> </span>to<span class="w"> </span>display<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;Table&#39;</span><span class="w"> </span>format
-<span class="w">            </span><span class="o">[</span>default:<span class="w"> </span><span class="m">40</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>possible<span class="w"> </span>values:<span class="w"> </span>numbers<span class="o">(</span><span class="m">0</span>/10/...<span class="o">)</span>,<span class="w"> </span>inf<span class="o">(</span>no<span class="w"> </span>limit<span class="o">)]</span>
+<span class="w">            </span><span class="o">[</span>possible<span class="w"> </span>values:<span class="w"> </span>numbers<span class="o">(</span><span class="m">0</span>/10/...<span class="o">)</span>,<span class="w"> </span>inf<span class="o">(</span>no<span class="w"> </span>limit<span class="o">)]</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span><span class="m">40</span><span class="o">]</span>
 
 <span class="w">        </span>--mem-pool-type<span class="w"> </span>&lt;MEM_POOL_TYPE&gt;
 <span class="w">            </span>Specify<span class="w"> </span>the<span class="w"> </span>memory<span class="w"> </span>pool<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="s1">&#39;greedy&#39;</span><span class="w"> </span>or<span class="w"> </span><span class="s1">&#39;fair&#39;</span>,<span class="w"> </span>default<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;greedy&#39;</span>
@@ -942,7 +997,7 @@ in the file. Please refer to the <a class="reference external" href="https://par
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.3.7.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3.<br>
 </p>
     </div>
     
